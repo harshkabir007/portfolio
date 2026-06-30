@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="section">
+
+    <div class="container">
+
+        <h1>{{ project.title }}</h1>
+
+        <br>
+
+        <img src="{{ project.image.url }}" class="img-fluid rounded">
+
+        <br><br>
+
+        <p>{{ project.description }}</p>
+
+        <h3>Technologies</h3>
+
+        <div class="tech-stack">
+
+            {% for tech in project.tech_list %}
+            <span>{{ tech }}</span>
+            {% endfor %}
+
+        </div>
+
+        {% if project.github %}
+
+        <a href="{{ project.github }}" class="btn btn-dark">
+
+            GitHub
+
+        </a>
+
+        {% endif %}
+
+        {% if project.demo %}
+
+        <a href="{{ project.demo }}" class="btn btn-primary">
+
+            Live Demo
+
+        </a>
+
+        {% endif %}
+
+    </div>
+
+</section>
+
+{% endblock %}

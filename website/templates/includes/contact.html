@@ -1,0 +1,112 @@
+<section id="contact" class="section">
+
+    <div class="container">
+
+        <div class="section-header text-center mb-5">
+
+            <h2>Contact Me</h2>
+
+            <p>
+                Have an opportunity, project or collaboration in mind?
+                Let's connect.
+            </p>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-5">
+
+                <div class="contact-info">
+
+                    <h3>Let's Talk</h3>
+
+                    <p>
+                        Feel free to reach out.
+                    </p>
+
+                    <div class="contact-item">
+                        <strong>Email</strong><br>
+                        <a href="mailto:harshkabir007@gmail.com">
+                            harshkabir007@gmail.com
+                        </a>
+                    </div>
+
+                    <div class="contact-item">
+                        <strong>Phone</strong><br>
+                        <a href="tel:+919634711718">
+                            +91 96347 11718
+                        </a>
+                    </div>
+
+                    <div class="contact-item">
+
+                        <strong>Location</strong><br>
+
+                        Ghaziabad, Uttar Pradesh
+
+                    </div>
+
+                    <div class="contact-item">
+                        <strong>GitHub</strong><br>
+                        <a href="https://github.com/harshkabir007" target="_blank">
+                            github.com/harshkabir007
+                        </a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>LinkedIn</strong><br>
+                        <a href="https://www.linkedin.com/in/harsh-kumar-9a06542a7/" target="_blank">
+                            linkedin.com/in/harsh-kumar
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-7">
+
+                <form method="POST">
+
+                    {% csrf_token %}
+
+                    <div class="mb-3">
+
+                        <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <input type="email" name="email" class="form-control" placeholder="Email" required>
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <input type="text" name="subject" class="form-control" placeholder="Subject">
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <textarea class="form-control" rows="6" name="message" placeholder="Message"
+                            required></textarea>
+
+                    </div>
+
+                    <button class="btn btn-primary btn-lg">
+
+                        Send Message
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

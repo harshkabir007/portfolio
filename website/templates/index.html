@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark glass-nav">
+
+    <div class="container">
+
+        <a class="navbar-brand fw-bold fs-3" href="#">
+            Harsh<span class="text-primary">.</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#experience">Experience</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+{% include 'includes/hero.html' %}
+
+<section id="about" class="section">
+
+    <div class="container">
+
+        <h2 class="text-center mb-5">About Me</h2>
+
+        <p class="lead text-center">
+
+            I'm a Computer Science student passionate about AI, Robotics, Computer Vision,
+            Industrial Automation and Embedded Systems. I enjoy developing intelligent
+            systems that combine software and hardware to solve real-world problems.
+
+        </p>
+
+    </div>
+
+</section>
+
+<section id="skills" class="section">
+
+    <div class="container">
+
+        <h2 class="text-center mb-5">Tech Stack</h2>
+
+        <div class="row g-4">
+
+            {% for skill in skills %}
+
+            <div class="col-lg-2 col-md-3 col-6">
+
+                <div class="tech-card">
+
+                    {% if skill.name == "Python" %}
+                    <i class="devicon-python-plain colored"></i>
+
+                    {% elif skill.name == "Django" %}
+                    <i class="devicon-django-plain"></i>
+
+                    {% elif skill.name == "OpenCV" %}
+                    <i class="devicon-opencv-plain colored"></i>
+
+                    {% elif skill.name == "PyTorch" %}
+                    <i class="devicon-pytorch-original colored"></i>
+
+                    {% elif skill.name == "TensorFlow" %}
+                    <i class="devicon-tensorflow-original colored"></i>
+
+                    {% elif skill.name == "Arduino" %}
+                    <i class="devicon-arduino-plain colored"></i>
+
+                    {% elif skill.name == "Git" %}
+                    <i class="devicon-git-plain colored"></i>
+
+                    {% elif skill.name == "GitHub" %}
+                    <i class="devicon-github-original"></i>
+
+                    {% elif skill.name == "Linux" %}
+                    <i class="devicon-linux-plain"></i>
+
+                    {% elif skill.name == "JavaScript" %}
+                    <i class="devicon-javascript-plain colored"></i>
+
+                    {% elif skill.name == "HTML" %}
+                    <i class="devicon-html5-plain colored"></i>
+
+                    {% elif skill.name == "CSS" %}
+                    <i class="devicon-css3-plain colored"></i>
+
+                    {% elif skill.name == "Docker" %}
+                    <i class="devicon-docker-plain colored"></i>
+
+                    {% elif skill.name == "PostgreSQL" %}
+                    <i class="devicon-postgresql-plain colored"></i>
+
+                    {% else %}
+                    <i class="bi bi-cpu-fill"></i>
+                    {% endif %}
+
+                    <h5>{{ skill.name }}</h5>
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+{% include "includes/projects.html" %}
+{% include "includes/experience.html" %}
+{% include "includes/achievements.html" %}
+{% include "includes/contact.html" %}
+{% endblock %}
