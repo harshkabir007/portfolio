@@ -1,4 +1,4 @@
-Django==5.0.3
+Django==6.0.6
 dj-database-url==3.1.2
 gunicorn==23.0.0
 Pillow==12.1.0
